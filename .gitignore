@@ -1,0 +1,6 @@
+.venv
+static/admin
+__pycache__
+
+node_modules
+build
