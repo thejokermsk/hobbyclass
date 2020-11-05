@@ -4,6 +4,7 @@
 @import "utils/fonts";
 
 html {
+  font-family: Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: $base-font-size;
   height: 100%;
 }
@@ -13,8 +14,14 @@ body {
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  color: #34363D;
+  fill: #34363D;
+  
 }
-
+a {
+  color: #34363D;
+  text-decoration: none;
+}
 *,
 *::before,
 *::after { box-sizing: border-box; }
@@ -84,13 +91,33 @@ button { outline: none; }
   height: 100%;
 }
 
-.content { flex: 1 0 auto; }
+.content { 
+  flex: 1 0 auto; 
+  margin-top: 15px;
+  &-container {
+    display: flex;
+
+    .sidenav {
+      width: 270px;
+      flex: 0 0 auto;
+      margin-right: 15px;
+    }
+
+    .main {
+      flex: 1 0 auto;
+    }
+  }
+}
 
 .container {
   margin: 0 auto;
   max-width: $content-size;
   width: 100%;
+  padding: 0 15px;
 }
 
+.light_green_color {
+  color: $light-green;
+}
 //Модули
 @import "modules/modules";

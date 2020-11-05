@@ -2,6 +2,11 @@ $(document).ready(function () {
     svg4everybody({});
 });
 
+$('.sidenav__menu__block-title').on('click', function() {
+    $('.sidenav__menu__block-items').slideUp()
+
+    $(this).parent().children('.sidenav__menu__block-items').slideDown()
+})
 
 // Полифилы
 

@@ -1,0 +1,27 @@
+.sidenav {
+  & > *:not(:last-child) {
+    margin-bottom: 15px;
+  }
+
+  &__menu {
+    &__block {
+      &-title {
+        font-size: 18px;
+        margin-bottom: 10px;
+        cursor: pointer;
+      }
+
+      &-items {
+        margin-left: 20px !important;
+        display: none;
+        & > *:not(:last-child) {
+          margin-bottom: 5px;
+        }
+      }
+
+      &:first-child &-items {
+        display: block;
+      }
+    }
+  }
+}

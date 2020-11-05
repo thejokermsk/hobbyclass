@@ -1,1 +1,34 @@
 header.header
+  .header__top
+    h1.header__top-title Интернет-магазин наборов для творчества
+  .header__middle
+    .container.header__middle-container
+      .header__middle__logo
+        img(src="static/images/general/logo.png" alt="").header__middle__logo-img
+      .header__middle__working_hours_phone
+        p.header__middle__working_hours_phone-working_hours.light_green_color с 10:00 до 19:00 ежедневно
+        a(href="+79035509955").header__middle__working_hours_phone-phone +7 (903) 550-99-55
+      .header__middle__addresses
+        .header__middle__addresses-column
+          img(src="static/images/general/map.jpg", alt="").header__middle__addresses-logo
+        .header__middle__addresses-column
+          a(href="mailto:mail@hobbyclass.ru").header__middle__addresses-email.light_green_color mail@hobbyclass.ru
+          p.header__middle__addresses-address  Москва, ул. Садовая-Кудринская, д.7, стр.8 
+      .header__middle__actions
+        a(href="").header__middle__actions-link
+          +icon('heart', 'header__middle__actions-icon')
+        a(href="").header__middle__actions-link
+          +icon('user', 'header__middle__actions-icon')
+  .header__bottom
+    .container.header__bottom-container
+      nav.header__bottom__nav
+        a(href="#").header__bottom__nav-link Каталог товаров
+        a(href="#").header__bottom__nav-link Корпоративные подарки
+        a(href="#").header__bottom__nav-link Акции и скидки
+        a(href="#").header__bottom__nav-link Доставка и оплата
+        a(href="#").header__bottom__nav-link Контакты
+      .header__bottom__cart 
+        a(href="#").header__bottom__cart-link
+          span.header__bottom__cart-badge 1
+          +icon('cart', 'header__bottom__cart-icon')
+      
