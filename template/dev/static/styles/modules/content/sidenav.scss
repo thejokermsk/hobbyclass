@@ -7,8 +7,9 @@
     &__block {
       &-title {
         font-size: 18px;
-        margin-bottom: 10px;
+        margin-bottom: 5px;
         cursor: pointer;
+        padding-bottom: 5px;
       }
 
       &-items {
@@ -22,6 +23,12 @@
       &:first-child &-items {
         display: block;
       }
+
+      &:not(:last-child) &-title {
+        border-bottom: 1px solid #EAEAEA;;
+        
+      }
+
     }
   }
 }

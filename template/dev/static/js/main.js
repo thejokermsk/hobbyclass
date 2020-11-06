@@ -1,12 +1,18 @@
 $(document).ready(function () {
     svg4everybody({});
+
+
+    $('.sidenav__menu__block-title').on('click', function() {
+        $(this).parent().children('.sidenav__menu__block-items').slideToggle()
+    })
+    
+
+    $('.owl-carousel').owlCarousel({
+        dots: true,
+        items: 1
+    });
 });
 
-$('.sidenav__menu__block-title').on('click', function() {
-    $('.sidenav__menu__block-items').slideUp()
-
-    $(this).parent().children('.sidenav__menu__block-items').slideDown()
-})
 
 // Полифилы
 

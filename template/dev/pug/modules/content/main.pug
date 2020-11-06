@@ -1,2 +1,36 @@
 main.main
-  h3 Main
+  .main__slider
+    .owl-carousel.owl-theme.owl-loaded
+      .owl-stage-outer
+        .owl-stage
+          .owl-item
+            img(src="static/images/content/slide.jpg", alt="")
+          .owl-item
+            img(src="static/images/content/slide.jpg", alt="")
+  .main__products
+    .main__product.product_cart
+      span(style="background-image: url('static/images/content/1.jpg');").product_cart-image
+        .product_cart__favorites
+          +icon('heart-inactive', 'product_cart__favorites--inactive')
+          +icon('heart', 'product_cart__favorites--active')
+      .product_cart-special
+        span.product_cart-special--new Новинка
+        span.product_cart-special--hot Хит
+        span.product_cart-special--special Акция
+      .product_cart-price
+        span.product_cart-price--old 950
+        span.product_cart-price--new 855 руб
+      h3.product_cart-name Картина по номерам "В раздумьях", 40х50 см
+      p.product_cart-size 40x50см
+      p.product_cart-type Пейзажи
+      .product_cart__actions
+        button.product_cart__actions-button В корзину
+        .product_cart__actions__quantity
+          span.product_cart__actions__quantity-button
+            +icon('minus')
+          input(type="number", value="1").product_cart__actions__quantity-input
+          span.product_cart__actions__quantity-button
+            +icon('plus')
+
+
+
