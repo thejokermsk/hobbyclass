@@ -1,0 +1,52 @@
+.main__cart
+  h1.main__cart-title Оформление заказа
+  .main__cart__register
+    .main__cart__form-fields
+      h3.main__cart__form-title.light_pink_color Ваши данные
+      .main__cart__form-field.form-field
+        label(for="name").form-label Имя*
+        input(type="text" id="name" name="name" placeholder="Иван").form-input
+      .main__cart__form-field.form-field
+        label(for="last-name").form-label Фамилия*
+        input(type="text" id="last-name" placeholder="Иванов").form-input
+      .main__cart__form-field.form-field
+        label(for="phone" ).form-label Телефон*
+        input(type="text" id="phone" placeholder="+7 (000) 000-00-00").form-input
+      .main__cart__form-field.form-field
+        label(for="email").form-label E-mail*
+        input(type="text" id="email" placeholder="example@email.ru").form-input
+      .main__cart__form-field.form-field
+        label(for="address").form-label Адрес*
+        input(type="text" id="address").form-input
+      .main__cart__form-field.form-field
+        label(for="comment" ).form-label Комментарий
+        input(type="text" id="comment").form-input
+      p.main__cart__form-option *Обязательные поля для заполнения
+    
+    .main__cart__form-delivery_and_payment
+      .main__cart__form-delivery
+        h3.main__cart__form-title.light_pink_color Доставка
+        .main__cart__form-block
+          .form-field
+            input(type="radio", id="radio1" name="shipping_method")
+            label(for="radio1").form-label Курьерская доставка
+          p.main__cart__form-value 350 руб.  
+        .main__cart__form-block
+          .form-field
+            input(type="radio", id="radio1" name="shipping_method")
+            label(for="radio1").form-label Курьерская доставка
+          p.main__cart__form-value 350 руб.  
+      .main__cart__form-payment
+        h3.main__cart__form-title.light_pink_color Доставка
+        .main__cart__form-block
+          .form-field
+            input(type="radio", id="radio2")
+            label(for="radio2").form-label Наличными при получении
+      .main__cart__total
+        .main__cart__total-row
+          .main__cart__total-column
+            .main__cart__total-line
+              p.main__cart__total-name Итого
+              hr.main__cart__total-hr
+              p.main__cart__total-value 4 250 руб. 
+            button(type="submit").button.button--green.main__cart__total-submit Перейти к оформлению заказа

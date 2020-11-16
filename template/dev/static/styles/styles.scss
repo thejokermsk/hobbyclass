@@ -4,7 +4,7 @@
 @import "utils/fonts";
 
 html {
-  font-family: Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   font-size: $base-font-size;
   height: 100%;
 }
@@ -91,20 +91,6 @@ button { outline: none; }
   height: 100%;
 }
 
-.content { 
-  flex: 1 0 auto; 
-  margin-top: 15px;
-  &-container {
-    display: flex;
-
-    .sidenav {
-      width: 270px;
-      flex: 0 0 auto;
-      margin-right: 15px;
-    }
-  }
-}
-
 .container {
   margin: 0 auto;
   max-width: $content-size;
@@ -114,6 +100,10 @@ button { outline: none; }
 
 .light_green_color {
   color: $light-green;
+}
+
+.light_pink_color {
+  color: $light-pink;
 }
 //Модули
 @import "modules/modules";

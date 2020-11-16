@@ -1,1 +1,45 @@
 footer.footer
+    .container.footer-container
+        .footer-column.footer-column-phone
+            .footer__phone
+                a(href="tel:+79035509955").footer__phone-phone +7 (903) 550-99-55
+                p.footer__phone-description.light_green_color с 10:00 до 19:00 ежедневно <br> Заказывайте через сайт в любое время суток! 
+            .footer__address
+                p.footer__address-address Москва, ул. Садовая-Кудринская, д.7, стр.8 
+                a(href="mailto:mail@hobbyclass.ru").light_green_color.footer__address-email mail@hobbyclass.ru
+        .footer-column.footer-column-catalog
+            h4.footer-title.light_green_color Каталог товаров: 
+            .footer__catalog
+                a(href="").footer__catalog-link Картина по номерам
+                a(href="").footer__catalog-link Картина акрилом
+                a(href="").footer__catalog-link Картина необычная 
+                a(href="").footer__catalog-link Картина обычная
+        .footer-column.footer-column-nav
+            h4.footer-title.light_green_color Навигация: 
+            .footer__nav
+                a(href="").footer__nav-link Акции и скидки
+                a(href="").footer__nav-link Доставка и оплата
+                a(href="").footer__nav-link Контакты
+                a(href="").footer__nav-link Политика конфиденциальности
+        .footer-column.footer-column-social
+            h4.footer-title.light_green_color Мы в социальных сетях: 
+            .footer__social
+                a(href="").footer__social-link
+                    +icon('vk')
+                a(href="").footer__social-link
+                    +icon('facebook')
+                a(href="").footer__social-link
+                    +icon('instagram')
+                a(href="").footer__social-link
+                    +icon('youtube')
+            a(href="").footer__enj
+                p.footer__enj-text Разработано в
+                span.footer__enj-img
+                    +icon('enj')
+
+    a(href="").footer__enj.footer__eng-small
+        p.footer__enj-text Разработано в
+        span.footer__enj-img
+            +icon('enj')          
+    p.footer-copyright © Copyright 2020 Интернет-магазин картин “Hobby class”. Все права защищены
+        

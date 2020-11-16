@@ -15,6 +15,9 @@
       &-items {
         margin-left: 20px !important;
         display: none;
+        &--open {
+          display: block;
+        }
         & > *:not(:last-child) {
           margin-bottom: 5px;
         }
@@ -24,11 +27,22 @@
         display: block;
       }
 
-      &:not(:last-child) &-title {
-        border-bottom: 1px solid #EAEAEA;;
-        
+      &-title {
+        border-bottom: 1px solid #EAEAEA;
       }
 
+    }
+  }
+}
+
+@media all and (max-width: 900px) {
+  .sidenav {
+    &__menu {
+      display: none;
+    }
+
+    &-instagram {
+      display: none;
     }
   }
 }

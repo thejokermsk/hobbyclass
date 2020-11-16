@@ -1,0 +1,54 @@
+table.main__cart__table
+  thead.main__cart__table-thead
+    tr.main__cart__table-items
+      th.main__cart__table-item.main__cart__table-item-image Фото и название товара
+      th.main__cart__table-item.main__cart__table-item-name
+      th.main__cart__table-item.main__cart__table-item-price Цена
+      th.main__cart__table-item.main__cart__table-item-quantity Кол-во 
+      th.main__cart__table-item.main__cart__table-item-trash Удалить
+  tbody.main__cart__table-tbody
+    tr(data-product-id="1").main__cart__table-items
+      td.main__cart__table-item
+        img(src="static/images/content/sale1.jpg", alt="").main__cart__table-item-image
+      td.main__cart__table-item.main__cart__table-item--md
+        p.main__cart__table-item-name Алмазная мозаика квадратными стразами 40x50 - Святейшее сердце Иисуса Христа
+        span.main__cart__table-item-material Материал: Холст на подрамнике
+      td.main__cart__table-item.main__cart__table-item--md
+        span.main__cart__table-item-price 4250 руб.
+      td.main__cart__table-item.main__cart__table-item--md
+        .product_cart__actions__quantity
+          span(data-actions="minus").product_cart__actions__quantity-button.product_cart__actions__quantity-button--disabled
+            +icon('minus')
+          input(type="number", value="1").product_cart__actions__quantity-input
+          span(data-actions="plus").product_cart__actions__quantity-button
+            +icon('plus')
+      td.main__cart__table-item.main__cart__table-item-trash.main__cart__table-item--md
+        +icon('trash')
+      td.main__cart__table-item.main__cart__table-item--sm
+        p.main__cart__table-item-name Алмазная мозаика квадратными стразами 40x50 - Святейшее сердце Иисуса Христа
+        span.main__cart__table-item-material Материал: Холст на подрамнике
+        .main__cart__table-item-row
+          .product_cart__actions__quantity
+            span(data-actions="minus").product_cart__actions__quantity-button.product_cart__actions__quantity-button--disabled
+              +icon('minus')
+            input(type="number", value="1").product_cart__actions__quantity-input
+            span(data-actions="plus").product_cart__actions__quantity-button
+              +icon('plus')
+          span.main__cart__table-item-trash
+            +icon('trash')
+        span.main__cart__table-item-price 4250 руб.
+.main__cart__total
+  button(type="button").main__cart__total-clear_all *Очистить корзину полностью
+  .main__cart__total-row
+    .main__cart__total-column
+      .main__cart__total-line
+        p.main__cart__total-name Товаров на сумму
+        hr.main__cart__total-hr
+        p.main__cart__total-value 4 250 руб. 
+      button(type="submit").button.button--green.main__cart__total-submit Перейти к оформлению заказа
+
+
+.main__cart__not_found
+  h3.main__cart__not_found-title.light_pink_color Ой, пусто
+  small.main__cart__not_found-description В вашей коризне еще нет товаров
+  a(href="").button.button--green.button--link Начать покупки

@@ -1,0 +1,31 @@
+.content { 
+    flex: 1 0 auto; 
+    margin-top: 15px;
+    &-container {
+      display: flex;
+  
+      .sidenav {
+        width: 270px;
+        flex: 0 0 auto;
+        margin-right: 15px;
+      }
+    }
+}
+
+
+@import "main";
+@import "sidenav";
+
+
+@media all and (max-width: 900px) {
+  .content {
+    &-container {
+      flex-direction: column;
+      .sidenav {
+        width: 100%;
+      }
+    }
+
+
+  }
+}

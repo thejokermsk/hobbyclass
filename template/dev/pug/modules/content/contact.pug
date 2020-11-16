@@ -1,0 +1,53 @@
+h1.main__cart-title Контакты
+.main__contact
+  .main__contact-row
+    .main__contact-block
+      .main__contact__info
+        .main__contact__info__title
+          +icon('map')
+          p Наш адрес:
+        .main__contact__info-descr
+          p Москва, ул. Садовая-Кудринская, д.7, стр.8
+      .main__contact__info
+        .main__contact__info__title
+          +icon('phone')
+          p Позвонить:
+        .main__contact__info-descr
+          p Москва, ул. Садовая-Кудринская, д.7, стр.8
+      .main__contact__info
+        .main__contact__info__title
+          +icon('chat')
+          p Постучаться:
+        .main__contact__info-descr
+          p Москва, ул. Садовая-Кудринская, д.7, стр.8
+      .main__contact__info
+        .main__contact__info__title
+          +icon('email')
+          p Написать:
+        .main__contact__info-descr
+          p Москва, ул. Садовая-Кудринская, д.7, стр.8
+
+    .main__contact-block
+      iframe(src='https://yandex.ru/map-widget/v1/?um=constructor%3Afede71594bc8061e1725391f512d08514e7b15c3310d5c7046a107c000b6ba6a&source=constructor', width='100%', height='300', frameborder='0')
+  .main__contact__form
+    form(action="").main__contact__form-form
+      .main__contact__form-title Не нашли то, что искали? <strong class="light_pink_color">Напишите или позвоните</strong> нам, мы обязательно поможем вам!
+      .main__contact__form-row
+        .main__contact__form-block
+          .input-field
+            input(type="text" placeholder="Имя")
+          .input-field
+            input(type="text")
+          .input-field
+            input(type="text")
+          .input-field
+            input(type="text")
+        .main__contact__form-block
+          .input-field
+            input(type="text")
+            
+          button.button.button--green Отправить
+          a(href="").light_green_color.button--link Написать в WhatsApp
+          .input-field.main__contact__form-policy
+            input(type="checkbox") 
+            label(for="") Я согласен(-а) на обработку <a class="light_green_color">персональных данных</a>, а также с условиями <a class="light_green_color">оферты</a>

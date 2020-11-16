@@ -5,9 +5,22 @@
   border: none;
   width: 100%;
   transition: all .2s linear;
-  font-size: 18px;
-  font-weight: bold;
-  
+  font-size: 16px;
+  font-weight: 500;
+
+  &--green {
+    background: linear-gradient(180deg, #07C4A7 0%, #0C8E7B 100%);
+    border-radius: 10px;
+    max-width: 300px;
+    height: 50px;
+    width: 240px;
+    transition: all .2s linear;
+
+    &:active {
+      box-shadow: 0px 4px 5px #0A806E;
+    }
+  }
+
   &--pink {
 
     background: linear-gradient(180deg, #EF72B7 0%, #D35299 100%);

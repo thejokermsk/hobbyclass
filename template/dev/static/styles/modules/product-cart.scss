@@ -1,10 +1,11 @@
 .product_cart {
-    max-width: 270px;
+    width: calc((100% - 40px) / 3);
     border: 1px solid #EAEAEA;
     border-radius: 4px;
     overflow: hidden;
     transition: all .3s linear;
     position: relative;
+    cursor: pointer;
     &:hover {
         box-shadow: inset 0px 10px 15px rgba(0, 0, 0, 0.05);
     }
@@ -30,7 +31,7 @@
             &::after {
                 content: '';
                 background-color: #ab0303;
-                width: 35px;
+                width: 110%;
                 height: 2px;
                 position: absolute;
                 left: -4px;
@@ -67,8 +68,7 @@
             padding: 0 5px;
             text-align: center;
             color: #ffffff;
-            font-weight: bold; 
-            display: none;
+            font-weight: bold;
         }
 
         &--new {
@@ -98,10 +98,18 @@
         font-weight: normal;
     }
 
-    &-size, &-type {
+    &-size, &-type a {
         font-size: 13px;
         color: #b8b8b8;
         font-weight: bold;
+        line-height: 19px;
+    }
+
+    &-type, &-size {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        height: 19px;
     }
 
     &__actions {
@@ -157,18 +165,57 @@
                 align-items: center;
                 justify-content: center;
 
+                transition: all .2s linear;
+
+                .icon-minus, .icon-plus {
+                    width: 10px;
+                    height: 10px;
+                    fill: $light-green;
+                }
+
+                &:hover {
+                    background-color: $light-green;
+                    .icon-minus, .icon-plus {
+                        fill: #ffffff !important;
+                    }
+                }
                 &--disabled {
                     border-color: #B8B8B8;
                     fill: #B8B8B8;
+                    cursor: default;
+                    .icon-minus, .icon-plus {
+                        fill: #B8B8B8 !important;
+                    }
+
+                    &:hover {
+                        background-color: #fff;
+
+                        .icon-minus, .icon-plus {
+                            fill: #B8B8B8 !important;
+                        }
+                    }
                 }
+
+
             }
 
-            .icon-minus, .icon-plus {
-                width: 11px;
-                height: 11px;
-                fill: $light-green;
-            }
+            
+
+
         }
     }
 
+}
+
+
+@media all and (max-width: 1150px) {
+    .product_cart {
+        width: calc((100% - 20px) / 2);
+    }
+}
+
+@media all and (max-width: 560px) {
+    .product_cart {
+        width: 100%;
+    }
 }

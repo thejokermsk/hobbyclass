@@ -36,12 +36,12 @@
     &__working_hours_phone {
       &-working_hours {
         font-size: 13px;
-        font-weight: bold;
+        font-weight: 500;
       }
 
       &-phone {
         font-size: 18px;
-        font-weight: bold;
+        font-weight: 500;
         color: #34363D;
         text-decoration: none;
         transition: opacity .2s linear;
@@ -55,18 +55,19 @@
     &__addresses {
       display: flex;
       align-items: center;
+      max-width: 310px;
       &-logo {
         max-width: 64px;
         max-height: 64px;
       }
       &-email {
         font-size: 13px;
-        font-weight: bold;
+        font-weight: 500;
         text-decoration: none;
       }
       &-address {
         font-size: 18px;
-        font-weight: bold;
+        font-weight: 500;
       }
     }
 
@@ -78,8 +79,10 @@
         width: 35px;
         height: 35px;
         fill: #34363D;
-        &.icon-heart {
-          fill: $light-pink;
+        transition: all .2s linear;
+
+        &:hover {
+          fill: $light-green;
         }
       }
     }
@@ -100,8 +103,21 @@
         margin-right: 20px;
       }
 
+      &-small-mnu {
+        cursor: pointer;
+        transition: all .2s linear;
+        display: none;
+        &:hover {
+          fill: $light-green;
+        }
+        .icon-menu {
+          width: 30px;
+          height: 30px;
+        }
+      }
+
       &-link {
-        font-weight: bold;
+        font-weight: 500;
         transition: color .2s linear;
 
         &:hover {
@@ -113,6 +129,10 @@
     &__cart {
       &-link {
         position: relative;
+        transition: all .2s linear;
+        &:hover {
+          fill: $light-green;
+        }
       }
 
       &-badge {
@@ -130,8 +150,64 @@
       }
 
       &-icon {
+        
         width: 30px;
         height: 30px;
+      }
+    }
+  }
+}
+
+
+@media all and (max-width: 900px) {
+  .header {
+    &__middle {
+      &__addresses {
+        display: none;
+      }
+    }
+
+    &__bottom {
+      &-container {
+        height: auto;
+        flex-wrap: wrap;
+      }
+
+      &__cart {
+        padding: 10px 0;
+      }
+
+      &__nav {
+        width: 100%;
+        order: 3;
+        display: none;
+        border-top: 1px solid #eaeaea;
+        font-size: 18px;
+        &-link {
+          display: block;
+        }
+
+        & > *:first-child {
+          margin-top: 15px;
+        }
+        & > * {
+          margin-bottom: 15px;
+        }
+
+        &-small-mnu {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+
+@media all and (max-width: 540px) {
+  .header {
+    &__middle {
+      &__working_hours_phone {
+        display: none;
       }
     }
   }
